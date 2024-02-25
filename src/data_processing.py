@@ -60,3 +60,4 @@ if __name__ == "__main__":
     fname = "1.csv"
     # load_data(data_folder)
     visualize_data(data_folder, fname)
+    normalize_data()
