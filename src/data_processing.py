@@ -7,7 +7,7 @@ from features import feature_extractor
 
 local_path = "C:/Users/Emma/Documents/SchoolWork/Fourth Year/APS360/"
 
-def load_data(data_folder):
+def load_data(data_folder: pd.DataFrame) -> pd.DataFrame:
     """
     This function loads the raw data into variables that can be used for further processing.
 
@@ -31,7 +31,7 @@ def load_data(data_folder):
     return file_data
 
 
-def visualize_data(data_folder, file):
+def visualize_data(data_folder: pd.DataFrame, file: str) -> None:
     """
     This function loads the raw data into variables that can be used for further processing.
 
@@ -54,7 +54,7 @@ def visualize_data(data_folder, file):
     plt.show()
 
 
-def normalize_data(df):
+def normalize_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     This function normalizes the data of all features to be a value
     between 0 and 1.
@@ -74,7 +74,7 @@ def normalize_data(df):
     return normalized_df
 
 
-def remove_duplicates(df):
+def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
     """
     This function removes any duplicate rows from the input df.
 
@@ -93,7 +93,7 @@ def remove_duplicates(df):
     return duplicates_removed_df
 
 
-def handle_missing_values(df):
+def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     """
     This function imputes missing values from the input df. It does so by using
     the mean value from 5 nearest neighbours found in the df.
